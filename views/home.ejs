@@ -15,7 +15,7 @@
             <nav class="nav nav-masthead">
                 <a href="#" aria-current="page" class="nav-link active">Home</a>
                 <a href="/campgrounds" class="nav-link">Campgrounds</a>
-                <% if(signedInUser) { %>
+                <% if(!signedInUser) { %>
                     <a href="/login" class="nav-link">Login</a>
                     <a href="/register" class="nav-link">Register</a>
                 <% } else { %>
