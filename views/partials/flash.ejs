@@ -1,0 +1,13 @@
+<% const alerts = [
+    { type: 'success', message: success },
+    { type: 'danger', message: error }
+]; %>
+
+<% alerts.forEach(alert => { %>
+    <% if (alert.message && alert.message.length) { %>
+        <div class="alert alert-<%= alert.type %> alert-dismissible fade show" role="alert">
+            <%= alert.message %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <% } %>
+<% }) %>
